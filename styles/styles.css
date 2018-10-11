@@ -12,3 +12,23 @@ main {
   align-items: stretch;
 }
 
+.todo {
+  background: magenta;
+  display: flex;
+  overflow: hidden;
+}
+
+.todo-text {
+  flex-grow: 1;
+}
+
+.controls {
+  background: lightseagreen;
+  display: inline-block;
+  margin-right: -100%;
+}
+
+.todo-text, .controls {
+  padding: 0.2rem 0;
+}
+
