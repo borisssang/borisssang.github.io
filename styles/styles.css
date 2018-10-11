@@ -28,6 +28,10 @@ main {
   margin-right: -100%;
 }
 
+.controls.transition {
+  transition: all 0.2s ease;
+}
+
 .controls.visible {
   margin-right: 0;
 }
