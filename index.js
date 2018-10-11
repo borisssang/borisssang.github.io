@@ -17,6 +17,11 @@ function createTodoElement(title) {
     var deleteBtn = document.createElement('button');
     deleteBtn.classList.add('delete');
     deleteBtn.innerText = "DELETE";
+    deleteBtn.onclick = function () {
+        var todo = this.parentNode.parentNode;
+        todo.parentNode.removeChild(todo);
+    };
+
     controls.appendChild(deleteBtn);
 
     todoLi.appendChild(controls);
