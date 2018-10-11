@@ -3,25 +3,25 @@
 <head>
   <title>My webpage!</title>
   <link rel="stylesheet" href="./styles/styles.css" />
-  <script async src="./index.js"></script>
 </head>
 
 <body>
   <main>
     <div class="add-container">
-      <input type="text" placeholder="Add todo..." />
-      <button type="button">Add</button>
+      <input id="todo-input" type="text" placeholder="Add todo..." />
+      <button type="button" onclick="addTodo(document.getElementById('todo-input').value)">Add</button>
     </div>
-    <div class="todos">
-      <div class="todo">
+    <ul id="todo-list">
+      <li class="todo">
         <span>example</span>
         <div class="controls">
-          <button type="button" class="complete">complete</button>
           <button type="button" class="delete">delete</button>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </main>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>
