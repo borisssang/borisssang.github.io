@@ -1,12 +1,27 @@
-
 <html>
-  <head>
-        <title>My webpage!</title>
-        <link rel="stylesheet" href="./styles/styles.css" />
-        <script async src="./index.js"></script>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <h4 id='date'></h4>
-  </body>
+
+<head>
+  <title>My webpage!</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <script async src="./index.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="add-container">
+      <input type="text" placeholder="Add todo..." />
+      <button type="button">Add</button>
+    </div>
+    <div class="todos">
+      <div class="todo">
+        <span>example</span>
+        <div class="controls">
+          <button type="button" class="complete">complete</button>
+          <button type="button" class="delete">delete</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
