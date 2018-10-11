@@ -15,17 +15,33 @@
         //controls.style.marginRight = -controls.offsetWidth;
     });
 
+    todos.addEventListener('mouseout', (event) => {
+        mouseDown = false;
+    });
+
     todos.addEventListener('mousemove', (event) => {
         if (!mouseDown) return;
 
         currentX = event.clientX;
         var diff = startX - currentX;
-        if (diff > 0) {
-            console.log(diff);
-            var controls = getControls(event);
+        var controls = getControls(event);
+        if (diff > controls.offsetWidth / 2) {
+            controls.style.removeProperty('margin-right');
+            controls.classList.add('visible');
+        } 
+        else if (diff > 0 && !controls.classList.contains('visible')) {   
             var width = controls.offsetWidth;
-            currentMargin = diff > width ? 0 : -width + diff;
-            controls.style.marginRight = currentMargin + 'px';
+            var margin = diff > width ? 0 : -width + diff;
+            controls.style.marginRight = margin + 'px';
+        }
+        else if (diff < -controls.offsetWidth / 2) {
+            controls.style.removeProperty('margin-right');
+            controls.classList.remove('visible');
+        }
+        else if (diff < 0) {
+            var width = controls.offsetWidth;
+            var margin = diff < -width ? -width : diff;
+            controls.style.marginRight = margin + 'px';
         }
     });
 

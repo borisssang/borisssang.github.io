@@ -28,6 +28,10 @@ main {
   margin-right: -100%;
 }
 
+.controls.visible {
+  margin-right: 0;
+}
+
 .todo-text, .controls {
   padding: 0.2rem 0;
 }
